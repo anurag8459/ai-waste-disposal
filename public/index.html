@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoSort — AI Waste Disposal</title>
+
+    <meta name="description" content="EcoSort uses AI to identify waste and guide you toward the right disposal method.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+
+                <span class="logo-mark">
+                    E
+                </span>
+
+                <span class="logo-text">
+                    Eco<span>Sort</span>
+                </span>
+
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#how-it-works">
+                    How it works
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+            </nav>
+
+            <a href="#scanner" class="nav-button">
+                Scan waste
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="status-dot"></span> AI-powered waste guidance
+                    </div>
+
+                    <h1>
+                        Know your waste.
+                        <span>Dispose it right.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Take a photo of any waste item and let EcoSort identify it, recommend the right disposal method, and explain its impact on the environment.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#scanner" class="primary-button">
+                            Start a free scan
+                            <span>→</span>
+                        </a>
+
+                        <a href="#how-it-works" class="secondary-button">
+                            See how it works
+                        </a>
+
+                    </div>
+
+                    <div class="hero-trust">
+
+                        <div class="trust-item">
+                            <span>✓</span> No account required
+                        </div>
+
+                        <div class="trust-item">
+                            <span>✓</span> Free to use
+                        </div>
+
+                        <div class="trust-item">
+                            <span>✓</span> AI-powered
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-top">
+
+                            <div class="mini-icon">
+                                ✦
+                            </div>
+
+                            <span>
+                                AI analysis
+                            </span>
+
+                            <div class="online-indicator">
+                                <span></span> Live
+                            </div>
+
+                        </div>
+
+                        <div class="scan-preview">
+
+                            <div class="scan-grid"></div>
+
+                            <div class="bottle-icon">
+                                ♻
+                            </div>
+
+                            <div class="scan-line"></div>
+
+                        </div>
+
+                        <div class="hero-card-result">
+
+                            <div>
+
+                                <small>
+                                    IDENTIFIED AS
+                                </small>
+
+                                <strong>
+                                    Plastic Bottle
+                                </strong>
+
+                            </div>
+
+                            <div class="confidence-badge">
+                                96%
+                            </div>
+
+                        </div>
+
+                        <div class="hero-card-footer">
+
+                            <span>
+                                Recommended
+                            </span>
+
+                            <strong>
+                                ♻ Recyclable
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-card-one">
+
+                        <span class="floating-icon green">
+                            ♻
+                        </span>
+
+                        <div>
+                            <strong>
+                                Recyclable
+                            </strong>
+
+                            <small>
+                                Dry waste
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-card-two">
+
+                        <span class="floating-icon yellow">
+                            ✓
+                        </span>
+
+                        <div>
+                            <strong>
+                                96% confidence
+                            </strong>
+
+                            <small>
+                                AI identification
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SCANNER ================= -->
+
+        <section class="scanner-section" id="scanner">
+
+            <div class="section-container">
+
+                <div class="section-heading center">
+
+                    <div class="section-label">
+                        <span>01</span> Waste scanner
+                    </div>
+
+                    <h2>
+                        What are you throwing away?
+                    </h2>
+
+                    <p>
+                        Upload a clear photo and let AI figure out what to do with it.
+                    </p>
+
+                </div>
+
+
+                <div class="scanner-card">
+
+                    <!-- Upload -->
+
+                    <div class="upload-area" id="uploadArea">
+
+                        <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" hidden>
+
+                        <div class="upload-content" id="uploadContent">
+
+                            <div class="upload-icon">
+                                ↑
+                            </div>
+
+                            <h3>
+                                Drop your waste photo here
+                            </h3>
+
+                            <p>
+                                or choose an image from your device
+                            </p>
+
+                            <button type="button" class="choose-button" id="chooseFileButton">
+                                Choose image
+                            </button>
+
+                            <span class="file-hint">
+                                JPG, PNG or WEBP · Max 5 MB
+                            </span>
+
+                        </div>
+
+
+                        <!-- Preview -->
+
+                        <div class="preview-container" id="previewContainer">
+
+                            <img id="imagePreview" src="" alt="Selected waste">
+
+                            <button type="button" class="remove-image" id="removeImage" aria-label="Remove image">
+                                ×
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Scanner footer -->
+
+                    <div class="scanner-footer">
+
+                        <div class="scanner-note">
+
+                            <span class="lock-icon">
+                                ◉
+                            </span> Your image is processed for analysis and then removed.
+
+                        </div>
+
+                        <button type="button" class="analyze-button" id="analyzeButton" disabled>
+
+                            <span id="analyzeButtonText">
+                                Analyze my waste
+                            </span>
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- Loading -->
+
+                    <div class="loading-state" id="loadingState">
+
+                        <div class="loader"></div>
+
+                        <div>
+
+                            <strong id="loadingTitle">
+                                Looking at your waste...
+                            </strong>
+
+                            <p id="loadingText">
+                                Identifying the item and its material.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Error -->
+
+                    <div class="error-message" id="errorMessage">
+
+                        <span>!</span>
+
+                        <p>
+                            Something went wrong.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <section class="results-section" id="results">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        <span>02</span> AI result
+                    </div>
+
+                    <h2>
+                        Here's what EcoSort found.
+                    </h2>
+
+                </div>
+
+
+                <div class="result-layout">
+
+                    <!-- Main Result -->
+
+                    <div class="result-main-card">
+
+                        <div class="result-top">
+
+                            <div>
+
+                                <span class="result-label">
+                                    IDENTIFIED WASTE
+                                </span>
+
+                                <h3 id="wasteName">
+                                    Plastic Bottle
+                                </h3>
+
+                                <span class="category-pill" id="wasteCategory">
+                                    Recyclable Waste
+                                </span>
+
+                            </div>
+
+                            <div class="confidence">
+
+                                <span>
+                                    Confidence
+                                </span>
+
+                                <strong id="confidence">
+                                    96%
+                                </strong>
+
+                                <div class="confidence-track">
+
+                                    <div id="confidenceBar" class="confidence-bar"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="recommended-box">
+
+                            <div class="recommend-icon">
+                                ♻
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    RECOMMENDED DISPOSAL
+                                </span>
+
+                                <strong id="recommendedBin">
+                                    Dry / Recyclable Waste
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Information -->
+
+                    <div class="result-info-grid">
+
+                        <article class="info-card">
+
+                            <div class="info-card-header">
+
+                                <span class="info-icon">
+                                    ↓
+                                </span>
+
+                                <span>
+                                    Disposal
+                                </span>
+
+                            </div>
+
+                            <p id="disposalMethod">
+                                Dispose of the bottle in a designated dry waste or recyclable waste collection bin.
+                            </p>
+
+                        </article>
+
+
+                        <article class="info-card">
+
+                            <div class="info-card-header">
+
+                                <span class="info-icon">
+                                    ♻
+                                </span>
+
+                                <span>
+                                    Recycling
+                                </span>
+
+                            </div>
+
+                            <p id="recycling">
+                                This item can usually be recycled after proper collection and sorting.
+                            </p>
+
+                        </article>
+
+
+                        <article class="info-card warning-card">
+
+                            <div class="info-card-header">
+
+                                <span class="info-icon">
+                                    !
+                                </span>
+
+                                <span>
+                                    Safety
+                                </span>
+
+                            </div>
+
+                            <p id="safety">
+                                Empty and rinse containers when appropriate before recycling.
+                            </p>
+
+                        </article>
+
+
+                        <article class="info-card impact-card">
+
+                            <div class="info-card-header">
+
+                                <span class="info-icon">
+                                    ◌
+                                </span>
+
+                                <span>
+                                    Environmental impact
+                                </span>
+
+                            </div>
+
+                            <p id="environmentImpact">
+                                Proper recycling helps keep plastic out of landfills and reduces pollution.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-actions">
+
+                    <button type="button" class="secondary-button" id="analyzeAnother">
+                        ← Analyze another item
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="process-section" id="how-it-works">
+
+            <div class="section-container">
+
+                <div class="section-heading center">
+
+                    <div class="section-label">
+                        <span>03</span> Simple process
+                    </div>
+
+                    <h2>
+                        Waste disposal made simple.
+                    </h2>
+
+                    <p>
+                        No complicated rules. Just take a photo and get a clear answer.
+                    </p>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            ↑
+                        </div>
+
+                        <h3>
+                            Upload
+                        </h3>
+
+                        <p>
+                            Take a photo of the waste item you want to identify.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-line"></div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            ✦
+                        </div>
+
+                        <h3>
+                            AI identifies
+                        </h3>
+
+                        <p>
+                            EcoSort analyzes the image and identifies the type of waste.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step-line"></div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            ♻
+                        </div>
+
+                        <h3>
+                            Dispose correctly
+                        </h3>
+
+                        <p>
+                            Follow the recommended disposal, recycling and safety guidance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about-section" id="about">
+
+            <div class="section-container">
+
+                <div class="about-card">
+
+                    <div class="about-content">
+
+                        <div class="section-label light">
+                            <span>04</span> Why EcoSort
+                        </div>
+
+                        <h2>
+                            Small decisions can make a cleaner difference.
+                        </h2>
+
+                        <p>
+                            Waste sorting can be confusing when you're standing in front of several different bins. EcoSort turns that confusion into a simple, practical recommendation using AI.
+                        </p>
+
+                        <a href="#scanner" class="light-button">
+                            Try EcoSort
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="about-stats">
+
+                        <div class="stat">
+
+                            <strong>
+                                AI
+                            </strong>
+
+                            <span>
+                                Image analysis
+                            </span>
+
+                        </div>
+
+                        <div class="stat">
+
+                            <strong>
+                                5MB
+                            </strong>
+
+                            <span>
+                                Maximum image
+                            </span>
+
+                        </div>
+
+                        <div class="stat">
+
+                            <strong>
+                                01
+                            </strong>
+
+                            <span>
+                                Simple scan
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+
+                    <span class="logo-mark">
+                        E
+                    </span>
+
+                    <span class="logo-text">
+                        Eco<span>Sort</span>
+                    </span>
+
+                </a>
+
+                <p>
+                    Smarter waste decisions, one scan at a time.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#how-it-works">
+                    How it works
+                </a>
+
+                <a href="#scanner">
+                    Scan waste
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 EcoSort
+            </span>
+
+            <span>
+                AI Waste Disposal System
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

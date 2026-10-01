@@ -1,0 +1,18 @@
+# Environment variables
+server/.env
+
+# Dependencies
+server/node_modules/
+
+# Uploaded images
+server/uploads/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
